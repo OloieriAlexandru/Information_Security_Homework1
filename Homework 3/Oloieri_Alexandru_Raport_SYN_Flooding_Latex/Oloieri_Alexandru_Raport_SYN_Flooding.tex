@@ -85,7 +85,7 @@ Vom simula atacul pe o rețea formata din 3 mașini Linux (Ubuntu 16.04), config
         \hspace*{-1.8cm}                                           \includegraphics[scale=0.64]{"./img/pas1.png"}       
     \end{center}
     
-    \item Ne conectăm la serverul FTP de pe mașina $ VM_1 $ pentru a vedea că într-adevăr serverul rulează: $ ftp 192.168.0.3 $, iar apoi introducem credențialele.
+    \item Ne conectăm la serverul FTP de pe mașina $ VM_1 $ pentru a vedea că într-adevăr serverul rulează: \textbf{ftp 192.168.0.3}, iar apoi introducem credențialele.
     
     \begin{center}
         \hspace*{-1.8cm}                                           \includegraphics[scale=0.64]{"./img/pas2.png"}       
@@ -97,7 +97,7 @@ Vom simula atacul pe o rețea formata din 3 mașini Linux (Ubuntu 16.04), config
         \hspace*{-1.8cm}                                           \includegraphics[scale=0.56]{"./img/pas3.png"}       
     \end{center}
     
-    \item Verificăm că pe mașina $ VM_3 $ sunt multe conexiuni aflate în starea \textbf{SYN\_RECV} folosind din nou comanda \textbf{netstat -tna}.
+    \item Verificăm că pe mașina $ VM_3 $ sunt multe conexiuni aflate în starea \textbf{SYN\_RECV} folosind din nou comanda \textbf{netstat -tna}. Se observă că în coloana \textbf{Foreign Address} adresele IP ale clientului sunt random (IP Spoofing).
     
     \begin{center}
         \hspace*{-1.8cm}                                           \includegraphics[scale=0.56]{"./img/pas4.png"}       
@@ -109,7 +109,7 @@ Vom simula atacul pe o rețea formata din 3 mașini Linux (Ubuntu 16.04), config
         \hspace*{-1.8cm}                                           \includegraphics[scale=0.64]{"./img/pas6.png"}       
     \end{center}
     
-    \item Încercăm să ne conectăm din nou la serverul FTP de pe mașina $ VM_1 $, însă de această dată nu vom reuși.
+    \item Încercăm să ne conectăm din nou la serverul FTP de pe mașina $ VM_1 $, însă de această dată nu vom reuși (Toate conexiunile au fost utilizate pentru răspunderea cererilor false, iar acum o cerere reală este ignorată).
     
     \begin{center}
         \hspace*{-1.8cm}                                          \includegraphics[scale=0.64]{"./img/pas5.png"}       
